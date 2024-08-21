@@ -19,7 +19,9 @@ const { auth, adminCheck} = require('../middleware/auth')
 
 // END point http://localhost:8888/api/product
 
-router.post('/product' ,auth, adminCheck,create)
+router.post('/product' ,auth, adminCheck,create,(req,res)=>{
+    //code
+    res.send('hello'))
 router.get('/product/:count' ,list)
 router.delete('/product/:id', auth, adminCheck, remove)
 
